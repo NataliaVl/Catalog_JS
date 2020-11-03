@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+      html, body {
+        font-family: 'Rubik', sans-serif; 
+      }
+      ul {
+        margin: 0.4rem;
+        list-style: none;
+      }
+      li{
+        list-style-type: none;
+        display: inline-block;    
+        cursor: pointer;
+      }
+      .routerName{
+        margin-right: 5rem;
+        margin-left: 5rem;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        display: inline-block;
+      }  
+      .container{
+        padding-left: 25vw;
+      }
+      .routerContainer{
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .popup {
+      	position: absolute;
+      	height:100%;
+      	width:100%;
+      	top:0;
+      	left:0;
+      	display:none;
+      	text-align:center;
+      }
+      svg {
+        cursor: pointer;
+      }
+      .star_gold{
+        fill: #f6e05e;
+      }
+      .catalog__star {
+	      margin-top: 0.5rem; 
+	      cursor:pointer;
+      }
+      .catalog__users, .catalog__titleAlbum {
+        font-size: 18px;
+        cursor: pointer;
+        align-items: baseline;      
+      }    
+      .catalog__userName::before, .catalog__titleAlbum::before {
+        display: inline-block;
+        content: '>';
+        margin-right: 0.2rem;
+      }    
+      .catalog__open::before, .catalog__openAlbum::before {
+        content: '>';
+        transform: rotate(90deg);
+        display: inline-block;
+      }    
+      .catalog__album__container{
+        margin-left: 2rem;
+        display: flex;
+        align-items: flex-start;
+      }    
+      .catalog__photo {
+        display: inline-block;
+        margin: 0.4rem;
+        margin-left: 20px;
+        width: 10rem;
+        height: 10rem;
+      }
+      .catalog__hidden, .catalog__hiddenAlbum {
+        display: none;
+      }
+      .catalog__popup_img {
+      	position: fixed;
+        left:25%;
+        top: 10%;
+      	margin:0 auto;
+      	z-index:2;
+      	max-height:94%;
+      	max-width:94%;
+      	margin:1% 0 0 0;
+      }
+      .favourite__containerTitleAlbum{
+      	display: flex;
+      	align-items: center;
+      	margin-bottom: 0.2rem;
+	    }
+      .favourite__titlePhoto{
+    		margin-left: 0.5rem;
+    	}
+      .favourite__popup_img {
+		    position: relative; 
+		    top: 10%;
+		    margin:0 auto;
+		    z-index:2;
+		    max-height:94%;
+		    max-width:94%;
+		    margin:1% 0 0 0;
+	    }
+      </style>
+    </head>
+
+  <body>   
+    <div class="routerContainer">
+      <span><a href="#catalog" class="routerName">КАТАЛОГ</a></span>
+      <span><a href="#favourite" class="routerName">ИЗБРАННОЕ</a></span>
+    </div>      
+    <div class="container">          
+      <div id="app"></div>
+    </div> 
+
+    <script src="js/route.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
